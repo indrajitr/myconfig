@@ -1,0 +1,82 @@
+# System-wide .bashrc file for interactive bash(1) shells.
+if [ -z "$PS1" ]; then
+   return
+fi
+
+PS1='\h:\W \u\$ '
+# Make bash check its window size after a process completes
+shopt -s checkwinsize
+
+
+# Custom Overrides
+# #################
+# TODO: Remove the unnecessary stuff from above at some point
+
+
+# Standard Colors
+# ###############
+# See http://tldp.org/LDP/abs/html/colorizing.html
+# See http://tldp.org/LDP/abs/html/sample-bashrc.html
+fg_black1='\e[0;30m'    ; fg_black2='\e[1;30m'
+fg_red1='\e[0;31m'      ; fg_red2='\e[1;31m'
+fg_green1='\e[0;32m'    ; fg_green2='\e[1;32m'
+fg_yellow1='\e[0;33m'   ; fg_yellow2='\e[1;33m'
+fg_blue1='\e[0;34m'     ; fg_blue2='\e[1;34m'
+fg_magenta1='\e[0;35m'  ; fg_magenta2='\e[1;35m'
+fg_cyan1='\e[0;36m'     ; fg_cyan2='\e[1;36m'
+fg_white1='\e[0;37m'    ; fg_white2='\e[1;37m'
+fg_nocolor='\e[0m'
+
+
+# Adjust Prompt to a more convenient form
+PS1="[\u@\h: \W]\\$ "
+#PS1="[\[${fg_green1}\]\u\[${fg_blue2}\]@\[${fg_blue1}\]\h:\[${fg_nocolor}\] \W]\\$ "
+
+
+# Shell Options
+# #############
+
+# Use case-insensitive filename globbing
+shopt -s nocaseglob
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+shopt -s cdspell
+
+# Causes the shell to attempt to save each line of a multi-line command 
+# in the same history entry, adding  semicolons  where necessary  to 
+# preserve syntactic correctness.
+shopt -s cmdhist
+
+# User is given the opportunity to re-edit a failed history substitution
+shopt -s histreedit
+
+
+# History Options
+# ###############
+
+# Don't put duplicate lines in the history.
+export HISTCONTROL="ignoredups"
+
+
+# Less Options
+# ############
+
+# less initialization script (sh)
+[ -x /usr/local/bin/lesspipe.sh ] && export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+
+
+# Functions
+# #########
+
+# Function for quick handy calculations from cli
+# See: http://www.commandlinefu.com/commands/view/2520/define-a-quick-calculator-function
+function ?() {
+  echo "$*" | /usr/bin/bc -l
+}
+
+# Function to run upon exit of shell
+function _exit() {
+  echo -e "${fg_red1}Goodbye!${fg_nocolor}"
+}
+trap _exit EXIT
