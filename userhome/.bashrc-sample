@@ -156,12 +156,6 @@ alias mvnDebug='/usr/local/maven/bin/mvnDebug'
 #[ -x /usr/local/bin/lesspipe.sh ] && export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
 
 
-# Git Options
-# ###########
-
-export GIT_EDITOR='mate -w'
-
-
 # Functions
 # #########
 
