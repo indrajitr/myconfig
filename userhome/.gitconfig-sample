@@ -1,0 +1,16 @@
+[github]
+	user = indrajitr
+[color]
+	ui = auto
+[core]
+  # See: http://help.github.com/dealing-with-lineendings/
+	autocrlf = input
+	editor = mate -w
+[user]
+	name = Indrajit Raychaudhuri
+	email = irc@indrajit.com
+[alias]
+  br = branch
+	ci = commit
+	co = checkout
+	st = status
