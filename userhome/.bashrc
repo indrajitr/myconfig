@@ -129,8 +129,8 @@ alias l='ls -CFG'                               #
 #alias wg='wget --server-response --timestamping --continue'
 #alias wgc='wget --timestamping --load-cookies "/cygdrive/c/Users/Indrajit/AppData/Roaming/Mozilla/Firefox/Profiles/6ew26973.default/cookies.txt"'
 
-#alias cu='curl --location --remote-time --continue-at - --remote-name'
-#alias cu='curl --location-trusted --remote-time --continue-at - --remote-name'
+#alias crl='curl --location --remote-time --continue-at - --remote-name'
+alias crl='/usr/bin/curl --location-trusted --remote-time --continue-at - --remote-name'
 
 alias cdd='cd "${HOME}/Downloads"'
 alias cdp='cd "${HOME}/Projects"'
