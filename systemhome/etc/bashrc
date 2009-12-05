@@ -89,6 +89,13 @@ function ?() {
   awk "BEGIN{ print $* }"
 }
 
+# Function for quick handy debugging of http performace
+# See http://forums.macosxhints.com/showpost.php?p=199191&postcount=7
+debug_http () {
+  /usr/bin/curl $@ -o /dev/null \
+  -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ;
+}
+
 # Function to run upon exit of shell
 function _exit() {
   echo -e "${fg_red1}Goodbye!${fg_nocolor}"
