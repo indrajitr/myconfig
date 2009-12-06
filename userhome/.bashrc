@@ -127,11 +127,11 @@ alias ll='ls -lG'                               # long list, colored
 alias l='ls -CFG'                               #
 
 # Custom shortcuts
-#alias wg='wget --server-response --timestamping --continue'
+alias wg='wget --server-response --timestamping --continue'
 #alias wgc='wget --timestamping --load-cookies "/cygdrive/c/Users/Indrajit/AppData/Roaming/Mozilla/Firefox/Profiles/6ew26973.default/cookies.txt"'
 
 #alias crl='curl --location --remote-time --continue-at - --remote-name'
-alias crl='/usr/bin/curl --location-trusted --remote-time --continue-at - --remote-name'
+alias crl='curl --location-trusted --remote-time --continue-at - --remote-name'
 
 alias cdd='cd "${HOME}/Downloads"'
 alias cdp='cd "${HOME}/Projects"'
