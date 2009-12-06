@@ -58,6 +58,9 @@ shopt -s histreedit
 # Don't put duplicate lines in the history.
 export HISTCONTROL="ignoredups"
 
+# Ignore some controlling instructions
+export HISTIGNORE="[   ]*:&:bg:fg:exit:ls:ll:l"
+
 
 # Completion options
 # ##################
@@ -84,14 +87,14 @@ esac
 # Function for quick handy calculations from cli
 # See http://www.commandlinefu.com/commands/view/2520/define-a-quick-calculator-function
 # See http://www.commandlinefu.com/commands/view/3871/command-line-calculator
-function ?() {
+function calc() {
   # echo "$*" | /usr/bin/bc -l
   awk "BEGIN{ print $* }"
 }
 
 # Function for quick handy debugging of http performace
 # See http://forums.macosxhints.com/showpost.php?p=199191&postcount=7
-debug_http () {
+debug_http() {
   /usr/bin/curl $@ -o /dev/null \
   -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ;
 }

@@ -83,7 +83,8 @@
 #export HISTCONTROL="ignoredups"
 
 # Ignore some controlling instructions
-export HISTIGNORE="[   ]*:&:bg:fg:exit:ls:ll:l"
+# UPDATE: Now in /etc/bashrc
+#export HISTIGNORE="[   ]*:&:bg:fg:exit:ls:ll:l"
 
 # Increase the maximum number of lines contained in the history file.
 # Default is 500.
