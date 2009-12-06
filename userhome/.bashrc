@@ -133,9 +133,6 @@ alias wg='wget --server-response --timestamping --continue'
 #alias crl='curl --location --remote-time --continue-at - --remote-name'
 alias crl='curl --location-trusted --remote-time --continue-at - --remote-name'
 
-alias cdd='cd "${HOME}/Downloads"'
-alias cdp='cd "${HOME}/Projects"'
-
 # OpenTerminal (ref: Read me (Inportant).pdf distributed with OpenTerminal)
 alias cdf='eval `osascript /Applications/Utilities/OpenTerminal.app/Contents/Resources/Scripts/OpenTerminal.scpt `'
 
