@@ -79,8 +79,12 @@ esac
 # less initialization script (sh)
 # The path assumes lesspipe installation from Macports
 [ -x /opt/local/bin/lesspipe.sh ] && export LESSOPEN="|/opt/local/bin/lesspipe.sh %s"
-# Adjust default less options
-#export LESS="-i -z-4 -M"
+
+# Adjust the default less options.
+# Note, git pager uses this variable to format the output properly.
+# Git pager defaults to the LESS variable set to FRSX. For this behavior to be preserved,
+# set core.pager to "less -+$LESS -FRSX"
+export LESS="-i -z-4 -M"
 
 
 # Functions
