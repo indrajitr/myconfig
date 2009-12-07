@@ -10,9 +10,9 @@
 	autocrlf = input
 	editor = /usr/local/bin/mate -w
 	pager = /usr/bin/less -+$LESS -FRX
-[github]
-	user = indrajitr
-	#token = <github-token>
 [user]
 	name = Indrajit Raychaudhuri
 	email = irc@indrajit.com
+[github]
+	user = indrajitr
+	#token = <github-token>
