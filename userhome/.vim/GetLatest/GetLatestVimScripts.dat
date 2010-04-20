@@ -1,0 +1,20 @@
+ScriptID SourceID Filename
+--------------------------
+
+# Getscript is a plugin that simplifies retrieval of the latest versions
+642 8136 :AutoInstall: getscript.vim
+
+# Vimball installer
+1502 11981 :AutoInstall: vimball.vim
+
+# Handles file transfer and remote directory listing across
+1075 11979 :AutoInstall: netrw.vim
+
+# A tool for dealing with pairs of "surroundings."
+1697 12566 :AutoInstall: surround.vim
+
+# A Git wrapper so awesome, it should be illegal
+2975 12673 :AutoInstall: fugitive.vim
+
+# Provides convenient ways to quickly reach a buffer/file/command/bookmark/tag
+1984 11852 :AutoInstall: FuzzyFinder
