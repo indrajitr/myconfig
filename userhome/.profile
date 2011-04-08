@@ -24,9 +24,9 @@ if [ "${BASH-no}" != "no" -a -e "${HOME}/.bashrc" ] ; then
 fi
 
 # Set PATH so it includes user's private bin if it exists
-# if [ -d "${HOME}/bin" ] ; then
-#   PATH=${HOME}/bin:${PATH}
-# fi
+if [ -d "${HOME}/bin" ] ; then
+  PATH=${HOME}/bin:${PATH}
+fi
 
 # Set MANPATH so it includes users' private man if it exists
 # if [ -d "${HOME}/man" ]; then
@@ -42,4 +42,4 @@ fi
 # The preferred order are (a) the current directory (empty string between the = and the first colon) 
 # (b) the parent directory, (c) the home directory, and (d) the ~/Projects directory
 # See http://www.commandlinefu.com/commands/view/1560/set-cdpath-to-ease-navigation
-export CDPATH=:..:~:~/Projects/Libraries:~/Projects/Business:~/Projects/Community:~/Projects/Personal:$CDPATH
+export CDPATH=.:..:~:~/Projects/Libraries:~/Projects/Business:~/Projects/Community:~/Projects/Personal:$CDPATH

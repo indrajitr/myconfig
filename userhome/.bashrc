@@ -89,6 +89,9 @@
 # Increase the maximum number of lines contained in the history file.
 # Default is 500.
 export HISTFILESIZE=8000
+# ... and load all of them too!
+export HISTSIZE=8000
+
 
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
@@ -142,8 +145,8 @@ alias cdf='eval `osascript /Applications/Utilities/OpenTerminal.app/Contents/Res
 alias jr='jruby -S'
 
 # Use newer version of Maven
-alias mvn='/usr/local/maven/bin/mvn'
-alias mvnDebug='/usr/local/maven/bin/mvnDebug'
+alias mvn2='/usr/local/apache-maven-2.2.1/bin/mvn'
+alias mvn2Debug='/usr/local/apache-maven-2.2.1/bin/mvnDebug'
 
 
 # Less Options
@@ -152,6 +155,11 @@ alias mvnDebug='/usr/local/maven/bin/mvnDebug'
 # less initialization script (sh)
 # UPDATE: Now in /etc/bashrc
 #[ -x /usr/local/bin/lesspipe.sh ] && export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+
+
+# Maven Options
+# #############
+export MAVEN_OPTS=-Xmx2048m
 
 
 # Functions
