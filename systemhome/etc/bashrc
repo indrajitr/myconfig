@@ -29,8 +29,8 @@ fg_nocolor='\e[0m'
 
 
 # Adjust Prompt to a more convenient form
-PS1="[\u@\h: \W]\\$ "
-#PS1="[\[${fg_green1}\]\u\[${fg_blue2}\]@\[${fg_blue1}\]\h:\[${fg_nocolor}\] \W]\\$ "
+#PS1="[\u@\h: \W]\\$ "
+PS1="[\[${fg_green1}\]\u\[${fg_blue2}\]@\[${fg_blue1}\]\h:\[${fg_nocolor}\] \W]\\$ "
 
 
 # Shell Options
@@ -67,9 +67,9 @@ export HISTIGNORE="[   ]*:&:bg:fg:exit:ls:ll:l"
 
 # If this shell is interactive, turn on programmable completion enhancements.
 # Any completions you add in ~/.bash_completion are sourced last.
-# The path assumes bash_completion installation from Macports
+# The path assumes bash_completion installation from Homebrew.
 case $- in
-  *i*) [[ -f /opt/local/etc/bash_completion ]] && source /opt/local/etc/bash_completion ;;
+  *i*) [[ -f `brew --prefix`/etc/bash_completion ]] && source `brew --prefix`/etc/bash_completion ;;
 esac
 
 
@@ -77,8 +77,8 @@ esac
 # ############
 
 # less initialization script (sh)
-# The path assumes lesspipe installation from Macports
-[ -x /opt/local/bin/lesspipe.sh ] && export LESSOPEN="|/opt/local/bin/lesspipe.sh %s"
+# The path assumes lesspipe installation from Homebrew
+[ -x `brew --prefix`/bin/lesspipe.sh ] && export LESSOPEN="|`brew --prefix`/bin/lesspipe.sh %s"
 
 # Adjust the default less options.
 # Note, git pager uses this variable to format the output properly.
