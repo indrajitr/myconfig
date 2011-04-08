@@ -1,0 +1,2 @@
+#SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M -Dsbt.intransitive=true -Dsbt.log.noformat=true"
+SBT_OPTS="-Xmx1g -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M -Dsbt.intransitive=true"
